@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubwaySurfers</title>
+    <!-- Bootstrap для адаптивности -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/2j-z3t20D8yLBLScuzp3sFfLCR40PHmQxdVO-O2JrFtcDA7pmg0ln-MmEDcm7tUsLn4">
+    <style>  
+        .top-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 20px;
+            background: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        
+        /* Адаптивная навигация */
+        .navigation {
+            background: #f8f9fa;
+            padding: 10px 0;
+        }
+        
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .nav-button:hover {
+            background: #ff5722;
+            color: white;
+            border-color: #ff5722;
+        }
+        
+        /* Вертикальное расположение изображений */
+        .images-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .image-item {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .image-item img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* Котик */
+        .fot04ki {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 15px;
+            text-align: center;
+        }
+        
+        .fot04ki img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="top"></div> 
+    
+    <!-- Навигация -->
+    <div class="container navigation">
+        <section> 
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-button"><u>Главная</u></a></li>
+                    <li><a href="history.html" class="nav-button">История игры</a></li>
+                    <li><a href="zadacha.html" class="nav-button">Отзыв</a></li>
+                    <li><a href="shop.html" class="nav-button">Магазин</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+    
+    <!-- Header -->
+    <header id="header" class="first-header"> 
+        <div class="overlay">
+            <b><h1 id="up" class="header-title">Игра Subway Surfers</h1></b>
+        </div>
+    </header>
+    
+    <!-- Локации -->
+    <div class="container mt-4">
+        
+        <div class="images-container">
+            <!-- Изображения идут одно под другим -->
+            <div class="image-item">
+                <img src="https://fast.startgamer.ru/i/images/28996/origin/game_28996_5ff892522236f.jpg" 
+                     alt="Классический геймплей Subway Surfers">
+                <p class="image-caption">СПБ</p>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://fast.startgamer.ru/i/images/31525/origin/game_31525_66efc736ef9bf.jpg" 
+                     alt="Персонажи Subway Surfers">
+                <p class="image-caption">Стамбул</p>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://static.wikia.nocookie.net/subwaysurf/images/7/79/MOSCOW.webp/revision/latest/scale-to-width-down/732?cb=20220324074338&path-prefix=ru" 
+                     alt="Московская локация">
+                <p class="image-caption">Москва</p>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://zastavki.gas-kvas.com/uploads/posts/2024-05/zastavki-gas-kvas-com-7mxz-p-zastavki-sabvei-serf-17.jpg" 
+                     alt="геймплей Subway Surfers">
+                <p class="image-caption">Лас-Вегас</p>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://zastavki.gas-kvas.com/uploads/posts/2024-05/zastavki-gas-kvas-com-7x5s-p-zastavki-sabvei-serf-22.jpg" 
+                     alt="Сингапур">
+                <p class="image-caption">Сингапур</p>
+            </div>
+            
+            <div class="image-item">
+                <img src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/11/subway-surfer.jpg" 
+                     alt="Отдых">
+                <p class="image-caption">Бали</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Котик -->
+    <div class="container">
+        <div class="fot04ki">
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsODuZhGFDScznDA9I95V6ZCzqij1bctvoW3Vwr296S-d9FMy5S69BAvVvLDDPoWxfr28&usqp=CAU" 
+               target="_blank" 
+               title="Милый котик!">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsODuZhGFDScznDA9I95V6ZCzqij1bctvoW3Vwr296S-d9FMy5S69BAvVvLDDPoWxfr28&usqp=CAU" 
+                     alt="картинка кот">
+            </a>
+            <p class="caption mt-3">
+                <a href="https://rutube.ru/video/661c0adabad37c53cb2537ef28bf5db7/" target="_blank" class="btn btn-outline-primary">
+                    <b>Шок контент кот на летающей доске...</b>
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Кнопка наверх -->
+    <a href="#top" class="top-button">↑ Наверх</a>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин игры</title>
+        <link rel="stylesheet" href="site2.css">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/2j-z3t20D8yLBLScuzp3sFfLCR40PHmQxdVO-O2JrFtcDA7pmg0ln-MmEDcm7tUsLn4">
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .navigationtwo {
+            background-color: #e9ecef;
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .nav-button-two {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 10px;
+            background: white;
+            border: 1px solid #6c757d;
+            color: #6c757d;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .nav-button:hover {
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .title-area {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .title-area h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .title-area p {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .menu-title {
+            text-align: center;
+            margin: 40px 0 30px;
+            font-size: 28px;
+        }
+        
+        .note {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .product-body {
+            padding: 20px;
+        }
+        
+        .product-name {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            color: #212529;
+        }
+        
+        .product-desc {
+            color: #6c757d;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0d6efd;
+            margin: 15px 0;
+        }
+        
+        .cart-area {
+            background: #f9f9f9;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 40px auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .cart-title {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+        
+        .cart-items {
+            margin-bottom: 20px;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .cart-total {
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #0d6efd;
+        }
+        
+        .cart-button {
+            width: 100%;
+            padding: 10px;
+            background: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .cart-button:hover {
+            background: #0b5ed7;
+        }
+        
+        .clear-button {
+            width: 100%;
+            padding: 10px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .clear-button:hover {
+            background: #bb2d3b;
+        }
+        
+        .footer {
+            background: #212529;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .back-button {
+            background: white;
+            color: #212529;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 992px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+       <div id="top"></div> 
+      <section class="navigation"> 
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-button">Главная</a></li>
+                <li><a href="history.html" class="nav-button">История игры</a></li>
+                <li><a href="zadacha.html" class="nav-button">Отзыв</a></li>
+                <li><a href="shop.html" class="nav-button"><u>Магазин</u></a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <div class="container">
+        <div class="title-area">
+            <h1> Собери себе подарочный набор вещей из любимой игры!</h1>
+            <p>Новогодние скидки: при покупке от пяти единиц – значок в подарок</p>
+        </div>
+        
+        <h2 class="menu-title">Опции для заказа:</h2>
+         <a href="#order-options" class="postscriptum">Минимальный заказ от 2500 рублей</a>
+        
+        <div class="products-grid">
+            <!-- Товар 1 -->
+            <div class="product-card">
+                <img src="футболка 1.jpg" alt="Футболка" class="product-image target_self">
+                <div class="product-body">
+                    <h3 class="product-name">Футболка с персонажем №1</h3>
+                    <p class="product-desc">Состав: 100% полиэстер</p>
+                    <div class="product-price">Цена: 825 ₽</div>
+                    <button class="cart-button" onclick="addToCart('Футболка №1', 825)">Добавить в корзину!</button>
+                </div>
+            </div>
+            
+            <!-- Товар 2 -->
+            <div class="product-card">
+                <img src="футболка 2.jpg" alt="Футболка" class="product-image">
+                <div class="product-body">
+                    <h3 class="product-name">Футболка с персонажем №2</h3>
+                    <p class="product-desc">Состав: 100% полиэстер</p>
+                    <div class="product-price">Цена: 1.010 ₽</div>
+                    <button class="cart-button" onclick="addToCart('Футболка №2', 1010)">Добавить в корзину!</button>
+                </div>
+            </div>
+            
+            <!-- Товар 3 -->
+            <div class="product-card">
+                <img src="футболка 3.jpg" alt="Футболка" class="product-image">
+                <div class="product-body">
+                    <h3 class="product-name">Футболка с персонажем №3</h3>
+                    <p class="product-desc">Состав: 100% полиэстер</p>
+                    <div class="product-price">Цена: 1.500 ₽</div>
+                    <button class="cart-button" onclick="addToCart('Футболка №3', 1500)">Добавить в корзину!</button>
+                </div>
+            </div>
+            
+            <!-- Товар 4 -->
+            <div class="product-card">
+                <img src="кепка игра.jpg" alt="Кепка" class="product-image">
+                <div class="product-body">
+                    <h3 class="product-name">Кепка бело-красная</h3>
+                    <p class="product-desc">Козырек: 100% хлопок. Кепка: 100% полиэстер</p>
+                    <div class="product-price">Цена: 570 ₽</div>
+                    <button class="cart-button" onclick="addToCart('Кепка бело-красная', 570)">Добавить в корзину!</button>
+                </div>
+            </div>
+            
+            <!-- Товар 5 -->
+            <div class="product-card">
+                <img src="кружка .jpg" alt="Кружка" class="product-image">
+                <div class="product-body">
+                    <h3 class="product-name">Кружка белая</h3>
+                    <p class="product-desc">Материал: керамика</p>
+                    <div class="product-price">Цена: 900 ₽</div>
+                    <button class="cart-button" onclick="addToCart('Кружка белая', 900)">Добавить в корзину!</button>
+                </div>
+            </div>
+            
+            <!-- Товар 6 -->
+            <div class="product-card">
+                <img src="сумка.jpg" alt="Сумка" class="product-image">
+                <div class="product-body">
+                    <h3 class="product-name">Сумка-шоппер</h3>
+                    <p class="product-desc">Материал: 100% полиэстер</p>
+                    <div class="product-price">Цена: 1.850 ₽</div>
+                    <button class="cart-button" onclick="addToCart('Сумка', 1850)">Добавить в корзину!</button>
+                </div>
+            </div>
+        </div>
+<p id="order-options" class="note"><strong>Перейти к оплате заказа</strong></p>
+        <div class="cart-area">
+            <h3 class="cart-title">Корзина</h3>
+            <div class="cart-items" id="cart-items">
+                <p style="text-align: center; color: #888;">Корзина пуста!</p>
+            </div>
+            <div class="cart-total">
+                Итого: <span id="cart-total">0</span> ₽
+            </div>
+            <button class="clear-button" onclick="clearCart()">Очистить корзину!</button>
+        </div>
+         <a href="#top" class="top-button">↑ Наверх</a>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+        
+        function addToCart(name, price) {
+            cart.push({name, price});
+            total += price;
+            updateCart();
+            
+            let button = event.target;
+            let originalText = button.textContent;
+            button.textContent = 'Added!';
+            button.style.background = '#198754';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#0d6efd';
+            }, 1000);
+        }
+        
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            
+            cartItems.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="text-align: center; color: #888;">Корзина пуста!</p>';
+            } else {
+                cart.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'cart-item';
+                    itemDiv.innerHTML = `
+                        <span>${item.name}</span>
+                        <span>${item.price}</span>
+                    `;
+                    cartItems.appendChild(itemDiv);
+                });
+            }
+            
+            cartTotal.textContent = total;
+        }
+        
+        function clearCart() {
+            cart = [];
+            total = 0;
+            updateCart();
+        }
+        
+        updateCart();
+    </script>
+</body>
+</html>

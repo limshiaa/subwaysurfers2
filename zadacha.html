@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+    <!-- ТОЛЬКО Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/2j-z3t20D8yLBLScuzp3sFfLCR40PHmQxdVO-O2JrFtcDA7pmg0ln-MmEDcm7tUsLn4">
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 3px solid #FB6C00;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #FB6C00;
+            margin-bottom: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #FB6C00;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #FF4500, #FFD700);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 25px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+        }
+        
+        .required {
+            color:  #FB6C00;
+        }
+        
+        fieldset {
+            border: 2px solid #FB6C00;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        legend {
+            font-weight: bold;
+            color:  #FB6C00;
+            padding: 0 10px;
+        }
+        .navigation { 
+            margin-bottom: 30px;
+        }
+        
+        .top-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 20px;
+            background: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        
+        /* Адаптивная навигация */
+        .navigation {
+            background: #f8f9fa;
+            padding: 10px 0;
+        }
+        
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .nav-button:hover {
+            background: #ff5722;
+            color: white;
+            border-color: #ff5722;
+        }
+        
+        
+        .nav-button u {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="top"></div>
+    
+    <!-- Навигация в Bootstrap контейнере -->
+    <div class="container navigation">
+        <section> 
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-button">Главная</a></li>
+                    <li><a href="history.html" class="nav-button">История игры</a></li>
+                    <li><a href="zadacha.html" class="nav-button"><u>Отзыв</u></a></li>
+                    <li><a href="shop.html" class="nav-button">Магазин</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+
+    <!-- Форма в Bootstrap контейнере -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="form-container">
+                    <h1>Оставьте отзыв о Subway Surfers</h1>
+                    
+                    <!-- Твоя форма без изменений -->
+                    <form action="https://google.com" method="get" target="_blank">
+                        <!-- ТИП TEXT: Имя игрока -->
+                        <div class="form-group" name="q">
+                            <label for="player_name">Ваше имя или игровой никнейм: <span class="required">*</span></label>
+                            <input type="text" id="player_name" name="player_name">
+                        </div>
+                        
+                        <!-- ТИП TEXT: Email -->
+                        <div class="form-group">
+                            <label for="player_email">Ваш email: <span class="required">*</span></label>
+                            <input type="text" id="player_email" name="player_email">
+                        </div>
+                        
+                        <!-- ТИП NUMBER: Количество часов игры -->
+                        <div class="form-group">
+                            <label for="playtime_hours">Сколько часов вы играли в Subway Surfers? <span class="required">*</span></label>
+                            <input type="number" id="playtime_hours" name="playtime_hours" min="1" max="1000">
+                        </div>
+                        
+                        <!-- ТИП NUMBER: Максимальный счет -->
+                        <div class="form-group">
+                            <label for="high_score">Ваш максимальный счет (рекорд): <span class="required">*</span></label>
+                            <input type="number" id="high_score" name="high_score" min="1000" max="10000000">
+                        </div>
+                        
+                        <!-- ТИП RADIO: Общая оценка игры -->
+                        <fieldset>
+                            <legend>Общая оценка игры: <span class="required">*</span></legend>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="rating_excellent" name="game_rating" value="excellent" required>
+                                    <label for="rating_excellent">Отлично (5 звёзд) </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="rating_good" name="game_rating" value="good">
+                                    <label for="rating_good">Хорошо (4 звезды) </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="rating_average" name="game_rating" value="average">
+                                    <label for="rating_average">Удовлетворительно (3 звезды)</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="rating_poor" name="game_rating" value="poor">
+                                    <label for="rating_poor">Плохо (2 звезды) </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- ТИП RADIO: Любимый персонаж -->
+                        <fieldset>
+                            <legend>Ваш любимый персонаж: <span class="required">*</span></legend>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="character_jake" name="favorite_character" value="jake" required>
+                                    <label for="character_jake">Джейк</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="character_tricky" name="favorite_character" value="tricky">
+                                    <label for="character_tricky">Трики</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="character_fresh" name="favorite_character" value="fresh">
+                                    <label for="character_fresh">Фреш</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="character_yutani" name="favorite_character" value="yutani">
+                                    <label for="character_yutani">Ютани</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="character_spike" name="favorite_character" value="spike">
+                                    <label for="character_spike">Спайк</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- ТИП TEXT: Любимая локация -->
+                        <div class="form-group">
+                            <label for="favorite_location">Ваша любимая локация в игре:</label>
+                            <input type="text" id="favorite_location" name="favorite_location">
+                        </div>
+                        
+                        <!-- ТИП RADIO: Рекомендация игры -->
+                        <fieldset>
+                            <legend>Порекомендуете ли вы игру друзьям? <span class="required">*</span></legend>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="recommend_yes" name="recommend_game" value="yes" required>
+                                    <label for="recommend_yes">Да, обязательно!</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="recommend_maybe" name="recommend_game" value="maybe">
+                                    <label for="recommend_maybe">Возможно</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="recommend_no" name="recommend_game" value="no">
+                                    <label for="recommend_no">Нет</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- ТИП TEXT: Комментарий -->
+                        <div class="form-group">
+                            <label for="player_comment">Ваш отзыв или комментарий:</label>
+                            <textarea id="player_comment" name="player_comment" rows="1"></textarea>
+                        </div>
+                        
+                        <!-- ТИП NUMBER: Возраст игрока -->
+                        <div class="form-group">
+                            <label for="player_age">Ваш возраст: <span class="required">*</span></label>
+                            <input type="number" id="player_age" name="player_age" min="6" max="99">
+                        </div>
+                        
+                        <!-- ТИП DATE: Дата начала игры -->
+                        <div class="form-group">
+                            <label for="start_date">Когда вы начали играть в Subway Surfers?</label>
+                            <input type="date" id="start_date" name="start_date">
+                        </div>
+                        
+                        <!-- Кнопка отправки -->
+                        <button type="submit" class="submit-btn">Отправить отзыв!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (не обязательно) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+    <a href="#top" class="top-button">↑ Наверх</a>
+</body>
+</html>
